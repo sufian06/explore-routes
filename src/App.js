@@ -15,11 +15,18 @@ function App() {
         { path: "/", element: <Home /> },
         { path: "/home", element: <Home /> },
         { path: "/products", element: <Products /> },
-        { path: "/friends", element: <Friends /> },
+        {
+          path: "/friends",
+          element: <Friends />,
+          loader: async () => {
+            return fetch("https://jsonplaceholder.typicode.com/users");
+          },
+        },
       ],
     },
 
     { path: "/about", element: <About /> },
+    { path: "*", element: <div>This route is not found</div> },
   ]);
   return (
     <div className="App">
