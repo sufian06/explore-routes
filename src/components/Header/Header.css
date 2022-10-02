@@ -1,0 +1,16 @@
+.header a {
+  background-color: burlywood;
+  text-decoration: none;
+  margin-right: 15px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-top: 15px;
+  display: inline-block;
+  color: black;
+  transition: 0.3s;
+  font-size: 17px;
+  font-weight: 500;
+}
+a:hover {
+  background-color: rgb(240, 199, 146);
+}
